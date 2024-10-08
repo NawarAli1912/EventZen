@@ -17,6 +17,8 @@ builder.Services.AddApplication([
 
 builder.Services.AddInfrastructure(builder.Configuration);
 
+builder.Configuration.AddModuleConfiguration(["events"]);
+
 builder.Services.AddEventModules(builder.Configuration);
 
 
