@@ -1,5 +1,7 @@
 using EventZen.Api.Extensions;
 using EventZen.Modules.Events.Infrastructure;
+using EventZen.Shared.Application;
+using EventZen.Shared.Infrastructure;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +10,12 @@ builder.Services.AddSwaggerGen(options =>
 {
     options.CustomSchemaIds(t => t.FullName?.Replace("+", "."));
 });
+
+builder.Services.AddApplication([
+    EventZen.Modules.Events.Application.AssemblyReference.Assembly,
+    ]);
+
+builder.Services.AddInfrastructure(builder.Configuration);
 
 builder.Services.AddEventModules(builder.Configuration);
 

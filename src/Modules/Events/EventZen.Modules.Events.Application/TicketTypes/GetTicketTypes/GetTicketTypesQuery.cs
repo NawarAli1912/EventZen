@@ -1,5 +1,5 @@
-﻿using EventZen.Modules.Events.Application.Abstractions.Messaging;
-using EventZen.Modules.Events.Application.TicketTypes.GetTicketType;
+﻿using EventZen.Modules.Events.Application.TicketTypes.GetTicketType;
+using EventZen.Shared.Application.Messaging;
 
 namespace EventZen.Modules.Events.Application.TicketTypes.GetTicketTypes;
 

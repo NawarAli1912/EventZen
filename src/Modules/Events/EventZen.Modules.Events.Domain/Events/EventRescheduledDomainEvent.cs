@@ -1,4 +1,4 @@
-﻿using EventZen.Modules.Events.Domain.Abstractions;
+﻿using EventZen.Shared.Domain.Abstractions;
 
 namespace EventZen.Modules.Events.Domain.Events;
 public sealed class EventRescheduledDomainEvent(Guid eventId, DateTime startsAtUtc, DateTime? endsAtUtc)

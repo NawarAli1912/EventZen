@@ -1,10 +1,10 @@
 ﻿using System.Data.Common;
 using Dapper;
-using EventZen.Modules.Events.Application.Abstractions.Data;
-using EventZen.Modules.Events.Application.Abstractions.Messaging;
 using EventZen.Modules.Events.Application.Events.GetEvents;
-using EventZen.Modules.Events.Domain.Abstractions;
 using EventZen.Modules.Events.Domain.Events;
+using EventZen.Shared.Application.Data;
+using EventZen.Shared.Application.Messaging;
+using EventZen.Shared.Domain.Abstractions;
 
 namespace EventZen.Modules.Events.Application.Events.SearchEvents;
 internal sealed class SearchEventsQueryhandler(

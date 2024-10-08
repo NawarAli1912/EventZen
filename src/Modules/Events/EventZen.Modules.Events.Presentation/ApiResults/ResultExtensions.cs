@@ -1,4 +1,4 @@
-﻿using EventZen.Modules.Events.Domain.Abstractions;
+﻿using EventZen.Shared.Domain.Abstractions;
 
 namespace EventZen.Modules.Events.Presentation.ApiResults;
 public static class ResultExtensions

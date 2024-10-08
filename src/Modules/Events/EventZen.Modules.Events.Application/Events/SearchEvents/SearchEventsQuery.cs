@@ -1,4 +1,4 @@
-﻿using EventZen.Modules.Events.Application.Abstractions.Messaging;
+﻿using EventZen.Shared.Application.Messaging;
 
 namespace EventZen.Modules.Events.Application.Events.SearchEvents;
 public sealed record SearchEventsQuery(

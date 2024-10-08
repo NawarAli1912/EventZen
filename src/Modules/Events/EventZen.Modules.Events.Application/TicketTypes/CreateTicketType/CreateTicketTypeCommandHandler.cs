@@ -1,11 +1,10 @@
 ﻿using EventZen.Modules.Events.Application.Abstractions.Data;
-using EventZen.Modules.Events.Application.Abstractions.Messaging;
-using EventZen.Modules.Events.Application.TicketTypes.CreateTicketType;
-using EventZen.Modules.Events.Domain.Abstractions;
 using EventZen.Modules.Events.Domain.Events;
 using EventZen.Modules.Events.Domain.TicketTypes;
+using EventZen.Shared.Application.Messaging;
+using EventZen.Shared.Domain.Abstractions;
 
-namespace Evently.Modules.Events.Application.TicketTypes.CreateTicketType;
+namespace EventZen.Modules.Events.Application.TicketTypes.CreateTicketType;
 
 internal sealed class CreateTicketTypeCommandHandler(
     IEventRepository eventRepository,

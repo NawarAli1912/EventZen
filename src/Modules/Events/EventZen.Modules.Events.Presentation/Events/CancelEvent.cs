@@ -1,7 +1,7 @@
 ﻿using EventZen.Modules.Events.Api;
 using EventZen.Modules.Events.Application.Events.CancelEvent;
-using EventZen.Modules.Events.Domain.Abstractions;
 using EventZen.Modules.Events.Presentation.ApiResults;
+using EventZen.Shared.Domain.Abstractions;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;

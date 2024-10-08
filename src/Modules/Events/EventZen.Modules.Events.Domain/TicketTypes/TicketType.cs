@@ -1,5 +1,5 @@
-﻿using EventZen.Modules.Events.Domain.Abstractions;
-using EventZen.Modules.Events.Domain.Events;
+﻿using EventZen.Modules.Events.Domain.Events;
+using EventZen.Shared.Domain.Abstractions;
 
 namespace EventZen.Modules.Events.Domain.TicketTypes;
 public sealed class TicketType : Entity

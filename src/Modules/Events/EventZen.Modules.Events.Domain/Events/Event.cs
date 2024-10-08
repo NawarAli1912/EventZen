@@ -1,5 +1,5 @@
-﻿using EventZen.Modules.Events.Domain.Abstractions;
-using EventZen.Modules.Events.Domain.Categories;
+﻿using EventZen.Modules.Events.Domain.Categories;
+using EventZen.Shared.Domain.Abstractions;
 
 namespace EventZen.Modules.Events.Domain.Events;
 public sealed class Event : Entity

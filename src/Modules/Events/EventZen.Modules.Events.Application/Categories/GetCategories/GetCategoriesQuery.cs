@@ -1,5 +1,5 @@
-﻿using EventZen.Modules.Events.Application.Abstractions.Messaging;
-using EventZen.Modules.Events.Application.Categories.GetCategory;
+﻿using EventZen.Modules.Events.Application.Categories.GetCategory;
+using EventZen.Shared.Application.Messaging;
 
 namespace EventZen.Modules.Events.Application.Categories.GetCategories;
 

@@ -1,9 +1,9 @@
-﻿using EventZen.Modules.Events.Application.Abstractions.Clock;
-using EventZen.Modules.Events.Application.Abstractions.Data;
-using EventZen.Modules.Events.Application.Abstractions.Messaging;
-using EventZen.Modules.Events.Domain.Abstractions;
+﻿using EventZen.Modules.Events.Application.Abstractions.Data;
 using EventZen.Modules.Events.Domain.Categories;
 using EventZen.Modules.Events.Domain.Events;
+using EventZen.Shared.Application.Clock;
+using EventZen.Shared.Application.Messaging;
+using EventZen.Shared.Domain.Abstractions;
 
 namespace EventZen.Modules.Events.Application.Events.CreateEvent;
 
