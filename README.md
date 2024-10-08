@@ -13,6 +13,7 @@
   - [Modular Monolith](#modular-monolith)
   - [Modules](#modules)
   - [Clean Architecture](#clean-architecture)
+	- [Shared Projects](#shared-projects)
   - [Domain-Driven Design](#domain-driven-design)
   - [Application Layer](#application-layer)
 - [Error Handling](#error-handling)
@@ -33,7 +34,7 @@
 - **User Management:** Robust user account handling with roles, permissions, and authentication mechanisms.
 - **Attendee Tracking:** Monitor and manage event participants with detailed attendee information and engagement tracking.
 - **Scalable Architecture:** Designed using Modular Monolith principles to ensure scalability and maintainability.
-- **RESTful API:** Intuitive HTTP API adhering to REST standards for easy integration and usage.
+- **RESTful API:** Intuitive HTTP API adhering to practical and used REST standards for easy integration and usage.
 
 ## Architecture
 
@@ -74,6 +75,13 @@ Adhering to **Clean Architecture** principles, EventZen ensures a clear separati
   
 - **Infrastructure Layer:**  
   Manages data access, external service integrations, and other infrastructural concerns.
+
+#### Shared Projects
+
+To promote code reusability and maintain consistency across different modules and layers, EventZen utilizes **Shared Projects**. These projects contain common code that can be leveraged by multiple modules, reducing duplication and fostering a cohesive codebase.
+
+- Contains fundamental entities, value objects, common dependency injection and abstractions that are universally applicable across all modules.
+ 
 
 ### Domain-Driven Design
 
