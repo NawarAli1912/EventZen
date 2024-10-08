@@ -27,7 +27,10 @@ builder.Services.AddSwaggerGen(options =>
 builder.Services.AddApplication([
     EventZen.Modules.Events.Application.AssemblyReference.Assembly,
     ]);
-builder.Services.AddInfrastructure(builder.Configuration);
+builder.Services.AddInfrastructure(
+    builder.Configuration.GetConnectionString("Database")!,
+    builder.Configuration.GetConnectionString("Redis")!
+    );
 
 builder.Configuration.AddModuleConfiguration(["events"]);
 

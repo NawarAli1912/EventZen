@@ -12,6 +12,7 @@ services:
       - 5001:8081
     depends_on:
       - eventzen.database
+      - eventzen.redis
   eventzen.database:
     image: postgres:latest
     container_name: EventZen.Database
@@ -31,5 +32,11 @@ services:
     ports:
       - 5341:5341
       - 8081:80
+  eventzen.redis:
+    image: redis:latest
+    container_name: EventZen.Redis
+    restart: always
+    ports:
+      - 6379:6379
 
 
