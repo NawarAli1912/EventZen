@@ -23,4 +23,13 @@ services:
       - ./.containers/db:/var/lib/postgresql/data
     ports:
       - 5433:5432
+  eventzen.seq:
+    image: datalust/seq:latest
+    container_name: EventZen.Seq
+    environment:
+      - ACCEPT_EULA=Y
+    ports:
+      - 5341:5341
+      - 8081:80
+
 

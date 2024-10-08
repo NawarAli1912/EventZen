@@ -6,8 +6,9 @@ internal static class ConfigurationExtensions
     {
         foreach (string module in modules)
         {
-            configurationBuilder.AddJsonFile($"module.{module}.json", false, true);
-            configurationBuilder.AddJsonFile($"module.{module}.Development.json", true, true);
+            configurationBuilder.AddJsonFile($"modules.{module}.json", false, true);
+            configurationBuilder.AddJsonFile($"modules.{module}.Development.json", true, true);
         }
     }
 }
+

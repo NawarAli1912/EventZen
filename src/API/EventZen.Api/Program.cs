@@ -2,8 +2,15 @@ using EventZen.Api.Extensions;
 using EventZen.Modules.Events.Infrastructure;
 using EventZen.Shared.Application;
 using EventZen.Shared.Infrastructure;
+using Serilog;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+
+// Enable serilog
+builder.Host.UseSerilog((context, loggerConfiguration) =>
+{
+    loggerConfiguration.ReadFrom.Configuration(context.Configuration);
+});
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
@@ -33,5 +40,7 @@ if (app.Environment.IsDevelopment())
 }
 
 EventsModule.MapEndpoints(app);
+
+app.UseSerilogRequestLogging();
 
 app.Run();
