@@ -1,4 +1,4 @@
-﻿using EventZen.Modules.Events.Api.Database;
+﻿using EventZen.Modules.Events.Infrastructure.Database;
 using Microsoft.EntityFrameworkCore;
 
 namespace EventZen.Api.Extensions;

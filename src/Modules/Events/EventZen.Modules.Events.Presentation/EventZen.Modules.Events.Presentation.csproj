@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\EventZen.Modules.Events.Application\EventZen.Modules.Events.Application.csproj" />
+  </ItemGroup>
+	
+
+</Project>

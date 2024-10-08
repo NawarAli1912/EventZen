@@ -1,12 +1,16 @@
 using EventZen.Api.Extensions;
-using EventZen.Modules.Events.Api;
+using EventZen.Modules.Events.Infrastructure;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.CustomSchemaIds(t => t.FullName?.Replace("+", "."));
+});
 
 builder.Services.AddEventModules(builder.Configuration);
+
 
 WebApplication app = builder.Build();
 
