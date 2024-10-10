@@ -1,6 +1,9 @@
-﻿namespace EventZen.Shared.Domain.Abstractions;
+﻿using MediatR;
 
-public interface IDomainEvent
+namespace EventZen.Shared.Domain.Abstractions;
+
+
+public interface IDomainEvent : INotification
 {
     Guid Id { get; }
 

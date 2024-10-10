@@ -1,5 +1,6 @@
 ﻿using EventZen.Modules.Events.Domain.Events;
 using EventZen.Modules.Events.Infrastructure.Database;
+using Microsoft.EntityFrameworkCore;
 
 namespace EventZen.Modules.Events.Infrastructure.Events;
 internal sealed class EventRepository : IEventRepository
@@ -11,13 +12,13 @@ internal sealed class EventRepository : IEventRepository
         _context = context;
     }
 
-    public Task<Event?> GetAsync(Guid id, CancellationToken cancellationToken = default)
+    public async Task<Event?> GetAsync(Guid id, CancellationToken cancellationToken = default)
     {
-        throw new NotImplementedException();
+        return await _context.Events.SingleOrDefaultAsync(e => e.Id == id, cancellationToken);
     }
 
     public void Insert(Event @event)
     {
-        _context.Add(@event);
+        _context.Events.Add(@event);
     }
 }

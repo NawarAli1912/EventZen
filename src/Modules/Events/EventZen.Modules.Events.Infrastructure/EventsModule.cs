@@ -6,6 +6,7 @@ using EventZen.Modules.Events.Infrastructure.Categories;
 using EventZen.Modules.Events.Infrastructure.Database;
 using EventZen.Modules.Events.Infrastructure.Events;
 using EventZen.Modules.Events.Infrastructure.TicketTypes;
+using EventZen.Shared.Infrastructure.Interceptors;
 using EventZen.Shared.Presentation.ApiResults;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Migrations;
@@ -27,14 +28,14 @@ public static class EventsModule
     {
         string databaseConnectionString = configuration.GetConnectionString("Database")!;
 
-        services.AddDbContext<EventsDbContext>(options =>
+        services.AddDbContext<EventsDbContext>((sp, options) =>
             options
                 .UseNpgsql(
                     databaseConnectionString,
                     npgsqlOptions => npgsqlOptions
                         .MigrationsHistoryTable(HistoryRepository.DefaultTableName, Schemas.Events))
                 .UseSnakeCaseNamingConvention()
-                .AddInterceptors());
+                .AddInterceptors(sp.GetRequiredService<PublishDomainEventsInterceptor>()));
 
         services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<EventsDbContext>());
 
