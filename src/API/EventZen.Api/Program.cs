@@ -3,6 +3,8 @@ using EventZen.Api.Middleware;
 using EventZen.Modules.Events.Infrastructure;
 using EventZen.Shared.Application;
 using EventZen.Shared.Infrastructure;
+using HealthChecks.UI.Client;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Serilog;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
@@ -24,15 +26,23 @@ builder.Services.AddSwaggerGen(options =>
 });
 
 // shared dependencies registration
+string dbConnectionString = builder.Configuration.GetConnectionString("Database")!;
+string redisConnectionString = builder.Configuration.GetConnectionString("Redis")!;
+
 builder.Services.AddApplication([
     EventZen.Modules.Events.Application.AssemblyReference.Assembly,
     ]);
 builder.Services.AddInfrastructure(
-    builder.Configuration.GetConnectionString("Database")!,
-    builder.Configuration.GetConnectionString("Redis")!
+    dbConnectionString,
+    redisConnectionString
     );
 
 builder.Configuration.AddModuleConfiguration(["events"]);
+
+
+builder.Services.AddHealthChecks()
+    .AddNpgSql(dbConnectionString)
+    .AddRedis(redisConnectionString);
 
 // modules registration
 builder.Services.AddEventModules(builder.Configuration);
@@ -48,6 +58,11 @@ if (app.Environment.IsDevelopment())
 }
 
 EventsModule.MapEndpoints(app);
+
+app.MapHealthChecks("health", new HealthCheckOptions
+{
+    ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+});
 
 app.UseSerilogRequestLogging();
 
