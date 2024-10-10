@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Shared\EventZen.Shared.Infrastructure\EventZen.Shared.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\..\Shared\EventZen.Shared.Presentation\EventZen.Shared.Presentation.csproj" />
+    <ProjectReference Include="..\EventZen.Modules.Users.Application\EventZen.Modules.Users.Application.csproj" />
+    <ProjectReference Include="..\EventZen.Modules.Users.Presentation\EventZen.Modules.Users.Presentation.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -39,6 +39,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventZen.Shared.Infrastruct
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventZen.Shared.Presentation", "src\Shared\EventZen.Shared.Presentation\EventZen.Shared.Presentation.csproj", "{91115DB5-670C-4132-8F5F-7AF42350463D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Users", "Users", "{E341E16E-DD82-4DB5-9050-43BC2799AC8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventZen.Modules.Users.Domain", "src\Modules\Users\EventZen.Modules.Users.Domain\EventZen.Modules.Users.Domain.csproj", "{DEB16E46-6A41-42D6-876A-F7B45238A886}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventZen.Modules.Users.Application", "src\Modules\Users\EventZen.Modules.Users.Application\EventZen.Modules.Users.Application.csproj", "{57ACA102-248A-4022-954C-19535A722148}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventZen.Modules.Users.Infrastructure", "src\Modules\Users\EventZen.Modules.Users.Infrastructure\EventZen.Modules.Users.Infrastructure.csproj", "{381CE008-E145-4F19-AB96-6F089B8E692F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventZen.Modules.Users.Presentation", "src\Modules\Users\EventZen.Modules.Users.Presentation\EventZen.Modules.Users.Presentation.csproj", "{A22BB16A-E2B7-491C-8E39-A3CB6D42280E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -85,6 +95,22 @@ Global
 		{91115DB5-670C-4132-8F5F-7AF42350463D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91115DB5-670C-4132-8F5F-7AF42350463D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91115DB5-670C-4132-8F5F-7AF42350463D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEB16E46-6A41-42D6-876A-F7B45238A886}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEB16E46-6A41-42D6-876A-F7B45238A886}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEB16E46-6A41-42D6-876A-F7B45238A886}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEB16E46-6A41-42D6-876A-F7B45238A886}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57ACA102-248A-4022-954C-19535A722148}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57ACA102-248A-4022-954C-19535A722148}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57ACA102-248A-4022-954C-19535A722148}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57ACA102-248A-4022-954C-19535A722148}.Release|Any CPU.Build.0 = Release|Any CPU
+		{381CE008-E145-4F19-AB96-6F089B8E692F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{381CE008-E145-4F19-AB96-6F089B8E692F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{381CE008-E145-4F19-AB96-6F089B8E692F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{381CE008-E145-4F19-AB96-6F089B8E692F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A22BB16A-E2B7-491C-8E39-A3CB6D42280E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A22BB16A-E2B7-491C-8E39-A3CB6D42280E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A22BB16A-E2B7-491C-8E39-A3CB6D42280E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A22BB16A-E2B7-491C-8E39-A3CB6D42280E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -103,6 +129,11 @@ Global
 		{618CAA0B-46E0-432A-930A-84F8292D51D5} = {070DCB75-4ECA-4DE1-9F67-B467BA2AE06D}
 		{9BD9B3A9-8E2D-463B-85BF-1E9E01325D26} = {070DCB75-4ECA-4DE1-9F67-B467BA2AE06D}
 		{91115DB5-670C-4132-8F5F-7AF42350463D} = {070DCB75-4ECA-4DE1-9F67-B467BA2AE06D}
+		{E341E16E-DD82-4DB5-9050-43BC2799AC8F} = {D65F6D07-66FB-4E58-9E7E-A6953F7D5B72}
+		{DEB16E46-6A41-42D6-876A-F7B45238A886} = {E341E16E-DD82-4DB5-9050-43BC2799AC8F}
+		{57ACA102-248A-4022-954C-19535A722148} = {E341E16E-DD82-4DB5-9050-43BC2799AC8F}
+		{381CE008-E145-4F19-AB96-6F089B8E692F} = {E341E16E-DD82-4DB5-9050-43BC2799AC8F}
+		{A22BB16A-E2B7-491C-8E39-A3CB6D42280E} = {E341E16E-DD82-4DB5-9050-43BC2799AC8F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DF3CB419-3152-4372-94B6-0261FFBD1A0C}
