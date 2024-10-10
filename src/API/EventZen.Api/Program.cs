@@ -3,6 +3,7 @@ using EventZen.Api.Middleware;
 using EventZen.Modules.Events.Infrastructure;
 using EventZen.Shared.Application;
 using EventZen.Shared.Infrastructure;
+using EventZen.Shared.Presentation.ApiResults;
 using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Serilog;
@@ -57,7 +58,7 @@ if (app.Environment.IsDevelopment())
     app.ApplyMigration();
 }
 
-EventsModule.MapEndpoints(app);
+app.MapEndpoints();
 
 app.MapHealthChecks("health", new HealthCheckOptions
 {

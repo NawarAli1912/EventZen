@@ -6,10 +6,7 @@ using EventZen.Modules.Events.Infrastructure.Categories;
 using EventZen.Modules.Events.Infrastructure.Database;
 using EventZen.Modules.Events.Infrastructure.Events;
 using EventZen.Modules.Events.Infrastructure.TicketTypes;
-using EventZen.Modules.Events.Presentation.Categories;
-using EventZen.Modules.Events.Presentation.Events;
-using EventZen.Modules.Events.Presentation.TicketTypes;
-using Microsoft.AspNetCore.Routing;
+using EventZen.Shared.Presentation.ApiResults;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.Extensions.Configuration;
@@ -18,16 +15,10 @@ using Microsoft.Extensions.DependencyInjection;
 namespace EventZen.Modules.Events.Infrastructure;
 public static class EventsModule
 {
-    public static void MapEndpoints(IEndpointRouteBuilder app)
-    {
-        EventEndpoints.MapEndpoints(app);
-        CategoryEndpoints.MapEndpoints(app);
-        TicketTypeEndpoints.MapEndpoints(app);
-    }
-
     public static IServiceCollection AddEventModules(this IServiceCollection services,
         IConfiguration configuration)
     {
+        services.AddEndpoints(Presentation.AssemblyReference.Assembly);
         services.AddInfrastructure(configuration);
         return services;
     }

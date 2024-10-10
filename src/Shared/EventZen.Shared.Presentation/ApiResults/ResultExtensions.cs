@@ -1,6 +1,6 @@
 ﻿using EventZen.Shared.Domain.Abstractions;
 
-namespace EventZen.Modules.Events.Presentation.ApiResults;
+namespace EventZen.Shared.Presentation.ApiResults;
 public static class ResultExtensions
 {
     public static TOut Match<TOut>(

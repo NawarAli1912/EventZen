@@ -1,7 +1,6 @@
-﻿using EventZen.Modules.Events.Api;
-using EventZen.Modules.Events.Application.Categories.ArchiveCategory;
-using EventZen.Modules.Events.Presentation.ApiResults;
+﻿using EventZen.Modules.Events.Application.Categories.ArchiveCategory;
 using EventZen.Shared.Domain.Abstractions;
+using EventZen.Shared.Presentation.ApiResults;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
@@ -16,7 +15,7 @@ internal static class ArchiveCategory
         {
             Result result = await sender.Send(new ArchiveCategoryCommand(id));
 
-            return result.Match(() => Results.Ok(), ApiResults.ApiResults.Problem);
+            return result.Match(() => Results.Ok(), ApiResults.Problem);
         })
             .WithTags(Tags.Categories);
     }

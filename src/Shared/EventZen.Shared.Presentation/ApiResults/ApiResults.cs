@@ -1,7 +1,7 @@
 ﻿using EventZen.Shared.Domain.Abstractions;
 using Microsoft.AspNetCore.Http;
 
-namespace EventZen.Modules.Events.Presentation.ApiResults;
+namespace EventZen.Shared.Presentation.ApiResults;
 
 public static class ApiResults
 {

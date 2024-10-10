@@ -1,4 +1,4 @@
-﻿namespace EventZen.Modules.Events.Api;
+﻿namespace EventZen.Modules.Events.Presentation;
 
 internal static class Tags
 {
