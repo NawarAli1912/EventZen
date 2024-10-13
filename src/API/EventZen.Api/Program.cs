@@ -1,6 +1,7 @@
 using EventZen.Api.Extensions;
 using EventZen.Api.Middleware;
 using EventZen.Modules.Events.Infrastructure;
+using EventZen.Modules.Ticketing.Infrastructure;
 using EventZen.Modules.Users.Infrastructure;
 using EventZen.Shared.Application;
 using EventZen.Shared.Infrastructure;
@@ -33,14 +34,15 @@ string redisConnectionString = builder.Configuration.GetConnectionString("Redis"
 
 builder.Services.AddApplication([
     EventZen.Modules.Events.Application.AssemblyReference.Assembly,
-    EventZen.Modules.Users.Application.AssemblyReference.Assembly
+    EventZen.Modules.Users.Application.AssemblyReference.Assembly,
+    EventZen.Modules.Ticketing.Application.AssemblyReference.Assembly
     ]);
 builder.Services.AddInfrastructure(
     dbConnectionString,
     redisConnectionString
     );
 
-builder.Configuration.AddModuleConfiguration(["events", "users"]);
+builder.Configuration.AddModuleConfiguration(["events", "users", "ticketing"]);
 
 
 builder.Services.AddHealthChecks()
@@ -50,6 +52,7 @@ builder.Services.AddHealthChecks()
 // modules registration
 builder.Services.AddEventModules(builder.Configuration);
 builder.Services.AddUsersModule(builder.Configuration);
+builder.Services.AddTicketingModule(builder.Configuration);
 
 WebApplication app = builder.Build();
 

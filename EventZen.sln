@@ -37,17 +37,27 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventZen.Shared.Domain", "s
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventZen.Shared.Infrastructure", "src\Shared\EventZen.Shared.Infrastructure\EventZen.Shared.Infrastructure.csproj", "{9BD9B3A9-8E2D-463B-85BF-1E9E01325D26}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventZen.Shared.Presentation", "src\Shared\EventZen.Shared.Presentation\EventZen.Shared.Presentation.csproj", "{91115DB5-670C-4132-8F5F-7AF42350463D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventZen.Shared.Presentation", "src\Shared\EventZen.Shared.Presentation\EventZen.Shared.Presentation.csproj", "{91115DB5-670C-4132-8F5F-7AF42350463D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Users", "Users", "{E341E16E-DD82-4DB5-9050-43BC2799AC8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventZen.Modules.Users.Domain", "src\Modules\Users\EventZen.Modules.Users.Domain\EventZen.Modules.Users.Domain.csproj", "{DEB16E46-6A41-42D6-876A-F7B45238A886}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventZen.Modules.Users.Domain", "src\Modules\Users\EventZen.Modules.Users.Domain\EventZen.Modules.Users.Domain.csproj", "{DEB16E46-6A41-42D6-876A-F7B45238A886}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventZen.Modules.Users.Application", "src\Modules\Users\EventZen.Modules.Users.Application\EventZen.Modules.Users.Application.csproj", "{57ACA102-248A-4022-954C-19535A722148}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventZen.Modules.Users.Application", "src\Modules\Users\EventZen.Modules.Users.Application\EventZen.Modules.Users.Application.csproj", "{57ACA102-248A-4022-954C-19535A722148}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventZen.Modules.Users.Infrastructure", "src\Modules\Users\EventZen.Modules.Users.Infrastructure\EventZen.Modules.Users.Infrastructure.csproj", "{381CE008-E145-4F19-AB96-6F089B8E692F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventZen.Modules.Users.Infrastructure", "src\Modules\Users\EventZen.Modules.Users.Infrastructure\EventZen.Modules.Users.Infrastructure.csproj", "{381CE008-E145-4F19-AB96-6F089B8E692F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventZen.Modules.Users.Presentation", "src\Modules\Users\EventZen.Modules.Users.Presentation\EventZen.Modules.Users.Presentation.csproj", "{A22BB16A-E2B7-491C-8E39-A3CB6D42280E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventZen.Modules.Users.Presentation", "src\Modules\Users\EventZen.Modules.Users.Presentation\EventZen.Modules.Users.Presentation.csproj", "{A22BB16A-E2B7-491C-8E39-A3CB6D42280E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ticketing", "Ticketing", "{F1B52B87-1880-455C-8850-BACFEEF90E4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventZen.Modules.Ticketing.Domain", "src\Modules\Ticketing\EventZen.Modules.Ticketing.Domain\EventZen.Modules.Ticketing.Domain.csproj", "{2EF4AAC0-BB62-49FD-A961-A1EEADA19D60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventZen.Modules.Ticketing.Application", "src\Modules\Ticketing\EventZen.Modules.Ticketing.Application\EventZen.Modules.Ticketing.Application.csproj", "{A9F07C15-F770-40E7-84EE-C3ABB6E0023D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventZen.Modules.Ticketing.Infrastructure", "src\Modules\Ticketing\EventZen.Modules.Ticketing.Infrastructure\EventZen.Modules.Ticketing.Infrastructure.csproj", "{DE2BC551-3BC4-4B7E-8002-24FAF37CD20F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventZen.Modules.Ticketing.Presentation", "src\Modules\Ticketing\EventZen.Modules.Ticketing.Presentation\EventZen.Modules.Ticketing.Presentation.csproj", "{C58226C8-002A-41D3-8015-9931A10FBE98}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -111,6 +121,22 @@ Global
 		{A22BB16A-E2B7-491C-8E39-A3CB6D42280E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A22BB16A-E2B7-491C-8E39-A3CB6D42280E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A22BB16A-E2B7-491C-8E39-A3CB6D42280E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EF4AAC0-BB62-49FD-A961-A1EEADA19D60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EF4AAC0-BB62-49FD-A961-A1EEADA19D60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EF4AAC0-BB62-49FD-A961-A1EEADA19D60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EF4AAC0-BB62-49FD-A961-A1EEADA19D60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9F07C15-F770-40E7-84EE-C3ABB6E0023D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9F07C15-F770-40E7-84EE-C3ABB6E0023D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9F07C15-F770-40E7-84EE-C3ABB6E0023D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9F07C15-F770-40E7-84EE-C3ABB6E0023D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE2BC551-3BC4-4B7E-8002-24FAF37CD20F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE2BC551-3BC4-4B7E-8002-24FAF37CD20F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE2BC551-3BC4-4B7E-8002-24FAF37CD20F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE2BC551-3BC4-4B7E-8002-24FAF37CD20F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C58226C8-002A-41D3-8015-9931A10FBE98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C58226C8-002A-41D3-8015-9931A10FBE98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C58226C8-002A-41D3-8015-9931A10FBE98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C58226C8-002A-41D3-8015-9931A10FBE98}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -134,6 +160,11 @@ Global
 		{57ACA102-248A-4022-954C-19535A722148} = {E341E16E-DD82-4DB5-9050-43BC2799AC8F}
 		{381CE008-E145-4F19-AB96-6F089B8E692F} = {E341E16E-DD82-4DB5-9050-43BC2799AC8F}
 		{A22BB16A-E2B7-491C-8E39-A3CB6D42280E} = {E341E16E-DD82-4DB5-9050-43BC2799AC8F}
+		{F1B52B87-1880-455C-8850-BACFEEF90E4E} = {D65F6D07-66FB-4E58-9E7E-A6953F7D5B72}
+		{2EF4AAC0-BB62-49FD-A961-A1EEADA19D60} = {F1B52B87-1880-455C-8850-BACFEEF90E4E}
+		{A9F07C15-F770-40E7-84EE-C3ABB6E0023D} = {F1B52B87-1880-455C-8850-BACFEEF90E4E}
+		{DE2BC551-3BC4-4B7E-8002-24FAF37CD20F} = {F1B52B87-1880-455C-8850-BACFEEF90E4E}
+		{C58226C8-002A-41D3-8015-9931A10FBE98} = {F1B52B87-1880-455C-8850-BACFEEF90E4E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DF3CB419-3152-4372-94B6-0261FFBD1A0C}

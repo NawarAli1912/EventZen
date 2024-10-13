@@ -25,6 +25,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Modules\Events\EventZen.Modules.Events.Infrastructure\EventZen.Modules.Events.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Modules\Ticketing\EventZen.Modules.Ticketing.Infrastructure\EventZen.Modules.Ticketing.Infrastructure.csproj" />
     <ProjectReference Include="..\..\Modules\Users\EventZen.Modules.Users.Infrastructure\EventZen.Modules.Users.Infrastructure.csproj" />
   </ItemGroup>
 

@@ -1,0 +1,7 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Shared\EventZen.Shared.Infrastructure\EventZen.Shared.Infrastructure.csproj" />
+    <ProjectReference Include="..\EventZen.Modules.Ticketing.Application\EventZen.Modules.Ticketing.Application.csproj" />
+    <ProjectReference Include="..\EventZen.Modules.Ticketing.Presentation\EventZen.Modules.Ticketing.Presentation.csproj" />
+  </ItemGroup>
+</Project>
