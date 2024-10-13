@@ -1,4 +1,5 @@
 ﻿namespace EventZen.Modules.Ticketing.Application.Carts;
+
 public sealed class Cart
 {
     public Guid CustomerId { get; init; }

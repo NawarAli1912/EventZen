@@ -1,5 +1,4 @@
-﻿
-using EventZen.Shared.Application.Messaging;
+﻿using EventZen.Shared.Application.Messaging;
 
 namespace EventZen.Modules.Ticketing.Application.Carts.ClearCart;
 

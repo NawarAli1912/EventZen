@@ -1,8 +1,17 @@
 ﻿using EventZen.Modules.Ticketing.Application.Abstraction.Data;
+using EventZen.Modules.Ticketing.Application.Abstraction.Payments;
 using EventZen.Modules.Ticketing.Application.Carts;
 using EventZen.Modules.Ticketing.Domain.Customers;
+using EventZen.Modules.Ticketing.Domain.Events;
+using EventZen.Modules.Ticketing.Domain.Orders;
+using EventZen.Modules.Ticketing.Domain.Payments;
+using EventZen.Modules.Ticketing.Domain.Tickets;
 using EventZen.Modules.Ticketing.Infrastructure.Customers;
 using EventZen.Modules.Ticketing.Infrastructure.Database;
+using EventZen.Modules.Ticketing.Infrastructure.Events;
+using EventZen.Modules.Ticketing.Infrastructure.Orders;
+using EventZen.Modules.Ticketing.Infrastructure.Payments;
+using EventZen.Modules.Ticketing.Infrastructure.Tickets;
 using EventZen.Modules.Ticketing.Presentation.Customers;
 using EventZen.Shared.Infrastructure.Interceptors;
 using EventZen.Shared.Presentation.ApiResults;
@@ -44,9 +53,15 @@ public static class TicketingModule
                 .UseSnakeCaseNamingConvention());
 
         services.AddScoped<ICustomerRepository, CustomerRepository>();
+        services.AddScoped<IEventRepository, EventRepository>();
+        services.AddScoped<ITicketTypeRepository, TicketTypeRepository>();
+        services.AddScoped<IOrderRepository, OrderRepository>();
+        services.AddScoped<ITicketRepository, TicketRepository>();
+        services.AddScoped<IPaymentRepository, PaymentRepository>();
 
         services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<TicketingDbContext>());
 
         services.AddSingleton<CartService>();
+        services.AddSingleton<IPaymentService, PaymentService>();
     }
 }

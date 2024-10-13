@@ -1,6 +1,7 @@
 ﻿using EventZen.Shared.Application.Caching;
 
 namespace EventZen.Modules.Ticketing.Application.Carts;
+
 public sealed class CartService(ICacheService cacheService)
 {
     private static readonly TimeSpan DefaultExpiration = TimeSpan.FromMinutes(20);
@@ -64,4 +65,3 @@ public sealed class CartService(ICacheService cacheService)
 
     private static string CreateCacheKey(Guid customerId) => $"carts:{customerId}";
 }
-
