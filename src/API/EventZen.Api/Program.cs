@@ -38,6 +38,7 @@ builder.Services.AddApplication([
     EventZen.Modules.Ticketing.Application.AssemblyReference.Assembly
     ]);
 builder.Services.AddInfrastructure(
+    [TicketingModule.ConfigureConsumers],
     dbConnectionString,
     redisConnectionString
     );

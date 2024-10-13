@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\EventZen.Modules.Users.IntegrationEvents\EventZen.Modules.Users.IntegrationEvents.csproj" />
     <ProjectReference Include="..\..\..\Shared\EventZen.Shared.Presentation\EventZen.Shared.Presentation.csproj" />
     <ProjectReference Include="..\EventZen.Modules.Ticketing.Application\EventZen.Modules.Ticketing.Application.csproj" />
   </ItemGroup>

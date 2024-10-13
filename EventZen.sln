@@ -59,6 +59,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventZen.Modules.Ticketing.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventZen.Modules.Ticketing.Presentation", "src\Modules\Ticketing\EventZen.Modules.Ticketing.Presentation\EventZen.Modules.Ticketing.Presentation.csproj", "{C58226C8-002A-41D3-8015-9931A10FBE98}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventZen.Modules.Users.IntegrationEvents", "..\EventZen.Modules.Users.IntegrationEvents\EventZen.Modules.Users.IntegrationEvents.csproj", "{D06F064E-7B42-4EBB-B7BF-782EE65F701B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -137,6 +139,10 @@ Global
 		{C58226C8-002A-41D3-8015-9931A10FBE98}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C58226C8-002A-41D3-8015-9931A10FBE98}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C58226C8-002A-41D3-8015-9931A10FBE98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D06F064E-7B42-4EBB-B7BF-782EE65F701B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D06F064E-7B42-4EBB-B7BF-782EE65F701B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D06F064E-7B42-4EBB-B7BF-782EE65F701B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D06F064E-7B42-4EBB-B7BF-782EE65F701B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -165,6 +171,7 @@ Global
 		{A9F07C15-F770-40E7-84EE-C3ABB6E0023D} = {F1B52B87-1880-455C-8850-BACFEEF90E4E}
 		{DE2BC551-3BC4-4B7E-8002-24FAF37CD20F} = {F1B52B87-1880-455C-8850-BACFEEF90E4E}
 		{C58226C8-002A-41D3-8015-9931A10FBE98} = {F1B52B87-1880-455C-8850-BACFEEF90E4E}
+		{D06F064E-7B42-4EBB-B7BF-782EE65F701B} = {E341E16E-DD82-4DB5-9050-43BC2799AC8F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DF3CB419-3152-4372-94B6-0261FFBD1A0C}

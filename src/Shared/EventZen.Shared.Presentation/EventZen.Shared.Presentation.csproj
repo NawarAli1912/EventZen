@@ -3,6 +3,9 @@
 	<FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="MassTransit.Abstractions" Version="8.2.5" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\EventZen.Shared.Domain\EventZen.Shared.Domain.csproj" />
   </ItemGroup>
 </Project>

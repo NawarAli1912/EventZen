@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace EventZen.Modules.Ticketing.Application.AddItemToCart;
+namespace EventZen.Modules.Ticketing.Application.Carts.AddItemToCart;
 
 internal sealed class AddItemToCartCommandValidator : AbstractValidator<AddItemToCartCommand>
 {

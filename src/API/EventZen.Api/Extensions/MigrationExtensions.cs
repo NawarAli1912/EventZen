@@ -1,4 +1,5 @@
 ﻿using EventZen.Modules.Events.Infrastructure.Database;
+using EventZen.Modules.Ticketing.Infrastructure.Database;
 using EventZen.Modules.Users.Infrastructure.Database;
 using Microsoft.EntityFrameworkCore;
 
@@ -12,6 +13,7 @@ internal static class MigrationExtensions
 
         ApplyMigration<EventsDbContext>(scope);
         ApplyMigration<UsersDbContext>(scope);
+        ApplyMigration<TicketingDbContext>(scope);
     }
 
     private static void ApplyMigration<TDbContext>(IServiceScope scope)

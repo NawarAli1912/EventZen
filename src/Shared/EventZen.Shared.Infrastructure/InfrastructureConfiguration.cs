@@ -1,10 +1,12 @@
 ﻿using EventZen.Shared.Application.Caching;
 using EventZen.Shared.Application.Clock;
 using EventZen.Shared.Application.Data;
+using EventZen.Shared.Application.EventBus;
 using EventZen.Shared.Infrastructure.Caching;
 using EventZen.Shared.Infrastructure.Clock;
 using EventZen.Shared.Infrastructure.Data;
 using EventZen.Shared.Infrastructure.Interceptors;
+using MassTransit;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Npgsql;
@@ -15,6 +17,7 @@ public static class InfrastructureConfiguration
 {
     public static IServiceCollection AddInfrastructure(
         this IServiceCollection services,
+        Action<IRegistrationConfigurator>[] moduleConfigureConsumers,
         string databaseConnectionString,
         string redisConnectionString)
     {
@@ -43,6 +46,22 @@ public static class InfrastructureConfiguration
         }
 
         services.TryAddSingleton<ICacheService, CacheService>();
+        services.TryAddSingleton<IEventBus, EventBus.EventBus>();
+        services.AddMassTransit(configure =>
+        {
+            foreach (Action<IRegistrationConfigurator> configureConsumers in moduleConfigureConsumers)
+            {
+                configureConsumers(configure);
+            }
+
+            configure.SetKebabCaseEndpointNameFormatter();
+            configure.UsingInMemory((context, cfg) =>
+            {
+
+                cfg.ConfigureEndpoints(context);
+            });
+
+        });
 
         return services;
     }
