@@ -2,6 +2,7 @@
 using EventZen.Shared.Application.Clock;
 using EventZen.Shared.Application.Data;
 using EventZen.Shared.Application.EventBus;
+using EventZen.Shared.Infrastructure.Authentication;
 using EventZen.Shared.Infrastructure.Caching;
 using EventZen.Shared.Infrastructure.Clock;
 using EventZen.Shared.Infrastructure.Data;
@@ -21,6 +22,8 @@ public static class InfrastructureConfiguration
         string databaseConnectionString,
         string redisConnectionString)
     {
+        services.AddAuthenticationInternal();
+
         NpgsqlDataSource npgsqlDataSource = new NpgsqlDataSourceBuilder(databaseConnectionString).Build();
         services.TryAddSingleton(npgsqlDataSource);
 
